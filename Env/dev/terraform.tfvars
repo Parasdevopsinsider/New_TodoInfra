@@ -11,11 +11,24 @@ rg_devB = {
   }
 }
 
-
-
-
-
-
-
+vnet_devB = {
+  vnet_dev_1 = {
+    name          = "devB-vnet-1"
+    location      = "West US"
+    rg_name       = "devB-rg-1"
+    address_space = ["10.0.0.0/16"]
+    tags = {
+      environment = "development"
+      project     = "todo-app"
+      owner       = "Paras_DevOps"
+    }
+    subnets = [
+      {
+        name             = "devB-subnet-1"
+        address_prefixes = ["10.0.1.0/24"]
+      }
+    ]
+  }
+}
 
 
