@@ -8,3 +8,9 @@ module "virtual_network" {
   vnet_dev1  = var.vnet_devB
   depends_on = [module.resource_group]
 }
+
+module "public_ip" {
+  source     = "../../Module/azurerm_public_ip"
+  pip_dev1   = var.pip_devB
+  depends_on = [module.resource_group]
+}
