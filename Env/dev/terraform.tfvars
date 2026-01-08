@@ -40,4 +40,20 @@ pip_devB = {
   }
 }
 
+nic_devB = {
+  nic_dev_1 = {
+    name      = "devB-nic-1"
+    location  = "West US"
+    rg_name   = "devB-rg-1"
+    vnet_name = "devB-vnet-1"
+    pip_name  = "devB-pip-1"
+    ip_configurations = [
+      {
+        subnet_key = "devB-subnet-1"
+        pip_key    = "devB-pip-1"
+      }
+    ]
+  }
+}
+
 

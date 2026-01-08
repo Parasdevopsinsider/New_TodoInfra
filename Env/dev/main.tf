@@ -14,3 +14,25 @@ module "public_ip" {
   pip_dev1   = var.pip_devB
   depends_on = [module.resource_group]
 }
+
+module "network_interface" {
+  source     = "../../Module/azurerm_nic"
+  nic_dev1   = var.nic_devB
+  depends_on = [module.public_ip]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
