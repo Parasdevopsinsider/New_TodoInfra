@@ -31,4 +31,13 @@ vnet_devB = {
   }
 }
 
+pip_devB = {
+  pip_dev_1 = {
+    name              = "devB-pip-1"
+    location          = "West US"
+    rg_name           = "devB-rg-1"
+    allocation_method = "Dynamic"
+  }
+}
+
 
