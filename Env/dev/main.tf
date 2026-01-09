@@ -20,19 +20,16 @@ module "network_interface" {
   nic_dev1   = var.nic_devB
   depends_on = [module.public_ip]
 
+}
 
+module "key_vault" {
+  source     = "../../Module/azurerm_keyvault"
+  kv_dev1    = var.kv_devB
+  depends_on = [module.resource_group]
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+module "key_vault_secrets" {
+  source     = "../../Module/azurerm_keyvault_secrets"
+  kvs_dev1   = var.kvs_devB
+  depends_on = [module.key_vault]
 }
