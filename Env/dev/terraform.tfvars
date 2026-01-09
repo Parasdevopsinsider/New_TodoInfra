@@ -56,4 +56,27 @@ nic_devB = {
   }
 }
 
+kv_devB = {
+  kv_dev_1 = {
+    name                       = "devB-kv-1"
+    location                   = "West US"
+    rg_name                    = "devB-rg-1"
+    sku_name                   = "standard"
+    purge_protection_enabled   = false
+    soft_delete_retention_days = 7
+    tags = {
+      environment = "development"
+      project     = "todo-app"
+      owner       = "Paras_DevOps"
+    }
+  }
+}
 
+kvs_devB = {
+  kvs_dev_1 = {
+    name           = "VMPassword"
+    value          = "Paras@1234"
+    key_vault_name = "devB-kv-1"
+    rg_name        = "devB-rg-1"
+  }
+}
