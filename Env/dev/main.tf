@@ -33,3 +33,15 @@ module "key_vault_secrets" {
   kvs_dev1   = var.kvs_devB
   depends_on = [module.key_vault]
 }
+
+module "virtual_machine" {
+  source     = "../../Module/azurerm_vm"
+  vm_dev1    = var.vm_devB
+  depends_on = [module.network_interface]
+}
+
+module "sql_server" {
+  source      = "../../Module/azurerm_sqlserver"
+  sqlsrv_dev1 = var.sqlsrv_devB
+  depends_on  = [module.resource_group]
+}
