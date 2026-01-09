@@ -109,3 +109,22 @@ sqlsrv_devB = {
     }
   }
 }
+
+sqldb_devB = {
+  sqldb_dev_1 = {
+    name         = "devbsqldb1"
+    location     = "West US"
+    rg_name      = "devB-rg-1"
+    server_name  = "devbsqlsrv1"
+    collation    = "SQL_Latin1_General_CP1_CI_AS"
+    license_type = "LicenseIncluded"
+    max_size_gb  = 2
+    sku_name     = "Basic"
+    enclave_type = "VBS"
+    tags = {
+      environment = "development"
+      project     = "todo-app"
+      owner       = "Paras_DevOps"
+    }
+  }
+}
