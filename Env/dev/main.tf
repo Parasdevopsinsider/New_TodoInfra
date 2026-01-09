@@ -45,3 +45,9 @@ module "sql_server" {
   sqlsrv_dev1 = var.sqlsrv_devB
   depends_on  = [module.resource_group]
 }
+
+module "sql_database" {
+  source     = "../../Module/azurerm_sql_database"
+  sqldb_dev1 = var.sqldb_devB
+  depends_on = [module.sql_server]
+}

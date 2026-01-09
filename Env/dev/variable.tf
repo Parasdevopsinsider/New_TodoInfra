@@ -13,3 +13,5 @@ variable "kvs_devB" {}
 variable "vm_devB" {}
 
 variable "sqlsrv_devB" {}
+
+variable "sqldb_devB" {}
