@@ -9,3 +9,7 @@ variable "nic_devB" {}
 variable "kv_devB" {}
 
 variable "kvs_devB" {}
+
+variable "vm_devB" {}
+
+variable "sqlsrv_devB" {}

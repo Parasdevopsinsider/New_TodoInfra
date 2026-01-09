@@ -80,3 +80,32 @@ kvs_devB = {
     rg_name        = "devB-rg-1"
   }
 }
+
+vm_devB = {
+  vm_dev_1 = {
+    name           = "devB-vm-1"
+    location       = "West US"
+    rg_name        = "devB-rg-1"
+    nic_name       = "devB-nic-1"
+    key_vault_name = "devB-kv-1"
+    secret_name    = "VMPassword"
+    vm_size        = "Standard_B1s"
+    admin_username = "azureuser"
+  }
+}
+
+sqlsrv_devB = {
+  sqlsrv_dev_1 = {
+    name                         = "devbsqlsrv1"
+    location                     = "West US"
+    rg_name                      = "devB-rg-1"
+    administrator_login          = "sqladminuser"
+    administrator_login_password = "Paras@1234"
+    version                      = "12.0"
+    tags = {
+      environment = "development"
+      project     = "todo-app"
+      owner       = "Paras_DevOps"
+    }
+  }
+}
